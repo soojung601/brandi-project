@@ -1,6 +1,11 @@
 from flask      import Flask
 from flask_cors import CORS
 
+from model      import UserDao
+from service    import UserService
+from view       import create_user_endpoints
+from connection import get_connection
+
 def create_app():
     """
 
@@ -18,5 +23,13 @@ def create_app():
     app = Flask(__name__)
     CORS(app)
     app.config.from_pyfile("config.py")
+
+    database = get_connection()
+
+    user_dao = UserDao(database)
+
+    user_service = UserService(user_dao)
+
+    app.register_blueprint(create_user_endpoints(user_service))
 
     return app
