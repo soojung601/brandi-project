@@ -1,5 +1,7 @@
 <template>
-  <router-link to="/detail"><button>detail</button></router-link>
+  <router-link to="/detail">
+    <button>detail</button>
+  </router-link>
 </template>
 
 <script>
