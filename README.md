@@ -15,6 +15,12 @@
 
 ## Technologies
 ### Front End
+- Vue
+- Webpack
+- Es6
+- Git, Github
+- Sass(SCSS)
+
 ### Back End
 - Python
 - Django
