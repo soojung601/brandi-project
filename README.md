@@ -17,7 +17,7 @@
 ### Front End
 - Vue
 - Webpack
-- Es6
+- JS(ES6)
 - Git, Github
 - Sass(SCSS)
 
