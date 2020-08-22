@@ -15,6 +15,8 @@ def get_connection():
 
     History :
         2020-08-19 (tnwjd060124@gmail.com) : 초기 생성
+        2020-08-21 (tnwjd060124@gmail.com) : 수정
+            cursorclass 추가
 
     """
 
@@ -24,6 +26,7 @@ def get_connection():
         user        = DATABASE["user"],
         password    = DATABASE["password"],
         database    = DATABASE["database"],
-        charset     = DATABASE["charset"]
+        charset     = DATABASE["charset"],
+        cursorclass = pymysql.cursors.DictCursor
     )
 
