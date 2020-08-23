@@ -104,7 +104,6 @@ section {
 }
 body {
   line-height: 1;
-  // background-color: #fafafa;
 }
 ol,
 ul {
@@ -125,42 +124,4 @@ q:after {
 a {
   all: unset;
   text-decoration: none;
-}
-
-.defaultText {
-  display: none;
-}
-
-.warningText {
-  font-size: 13px;
-  margin-top: -15px;
-  margin-bottom: 10px;
-  font-weight: 500;
-  line-height: 1.42857143;
-  color: #b94a48;
-}
-
-.defaultInput {
-  border: 1px solid lightgray;
-  border-radius: 3px;
-  height: 34px;
-  margin-bottom: 20px;
-  padding: 6px 12px 6px 33px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #333333;
-}
-
-.warningInput {
-  border: 1px solid #b94a48;
-  border-radius: 3px;
-  height: 34px;
-  margin-bottom: 20px;
-  padding: 6px 12px 6px 33px;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-* {
-  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
 }

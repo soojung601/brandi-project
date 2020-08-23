@@ -23,6 +23,14 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: ["vue-style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        loader: "file-loader",
+        options: {
+          publicPath: "/some/path/",
+          postTransformPublicPath: (p) => `__webpack_public_path__ + ${p}`,
+        },
+      },
     ],
   },
   plugins: [new VueLoaderPlugin()],
