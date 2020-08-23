@@ -13,16 +13,56 @@
           <span class="border">|</span>
           <span class="findPw">비밀번호 찾기</span>
         </div>
+        <div></div>
         <h3 class="socialTitle">간편 로그인 / 가입</h3>
-        <button class="googleLogin">Google 계정으로 계속하기</button>
+        <GoogleLogin
+          class="googleLogin"
+          :params="params"
+          :onSuccess="onSuccess"
+        >
+          <div class="imgContainer">
+            <img src="/Images/google-logo.png" />
+          </div>
+          Google 계정으로 계속하기
+        </GoogleLogin>
       </div>
     </main>
   </section>
 </template>
 
 <script>
-export default {};
+import { ClientId } from "../../../config.js";
+import { GoogleLogin } from "vue-google-login";
+import { test } from "../../../config.js";
+
+export default {
+  data() {
+    return {
+      //구글 로그인 하기
+      params: {
+        client_id: ClientId,
+      },
+      renderParams: {
+        width: 250,
+        height: 50,
+        longtitle: true,
+      },
+    };
+  },
+  components: {
+    GoogleLogin,
+  },
+  methods: {
+    onSuccess(googleUser) {
+      console.log(googleUser);
+
+      // This only gets the user information: id, name, imageUrl and email
+      console.log(googleUser.getBasicProfile());
+    },
+  },
+};
 </script>
+
 <style lang="scss" scoped>
 .main {
   display: flex;
@@ -105,15 +145,41 @@ export default {};
       }
 
       .socialTitle {
-        margin: 15px;
-        padding-top: 20px;
+        margin: 35px 0 15px;
         text-align: center;
         font-weight: bold;
         font-size: 16px;
       }
 
       .googleLogin {
-        margin-bottom: 50px;
+        width: 278px;
+        height: 50px;
+        background-color: white;
+        border: 1px solid #bdbdbd;
+        border-radius: 5px;
+        margin: 0 auto 50px;
+        font-weight: 500;
+        color: #666;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+          color: white;
+          background-color: black;
+        }
+
+        .imgContainer {
+          width: 28px;
+          height: 28px;
+          margin-right: 10px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
       }
     }
   }
