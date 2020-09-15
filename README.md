@@ -6,11 +6,11 @@
 -   개발 기간 : 2020/08/18 ~ 2020/09/11 (4주)
 -   개발 인원 : 프론트엔드 2명([김경배](https://github.com/rudqo14), [배정규](https://github.com/junggyoo)), 백엔드 3명([손수정](https://github.com/soojung601), [이곤호](https://github.com/sincerity10), [이민호](https://github.com/minho-lee0716))
 
-## Model
-
 ## Demo
 
-## 적용 기술 및 구현 기능
+
+
+## Feactures
 
 
 ## Technologies
